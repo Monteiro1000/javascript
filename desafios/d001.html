@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens</title>
+
+    <style>
+        input{
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio das mensagens</h1>
+    <input type="button" value="Botão 1" id="botao1" onclick="clicar1()">
+    <input type="button" value="Botão 2" id="botao2" onclick="clicar2()" >
+    <input type="button" value="Botão 3" id="botao3" onclick="clicar3()">
+
+    <script>
+        function clicar1(){
+        var bt1 = document.querySelector('input#botao1')
+        window.alert('Você clicou no 1 botão!')
+    }
+
+    function clicar2(){
+        var bt2 = document.querySelector('input#botao2')
+        window.alert('Você clicou no 2 botão!')
+    }
+
+    function clicar3(){
+        var bt3 = document.querySelector('input#botao3')
+        window.alert('Você clicou no 3 botão!')
+    }
+
+
+    </script>
+
+    
+</body>
+</html>
