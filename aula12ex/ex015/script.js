@@ -10,11 +10,40 @@ function verificar() {
         var fsex = document.getElementsByName('radsex')
         var idade = ano - Number(fano.value)
         var gênero = ''
+        var img = document.createElement('img')
+        img.setAttribute('id', 'foto')
         if (fsex[0].checked) {
          gênero = 'Homem'
+         if(idade >= 0 && idade < 10) {
+            //criança
+            img.setAttribute('src', 'imagens/foto-criança-m.jpg')
+         }else if (idade < 21){
+            //jovem
+            img.setAttribute('src', 'imagens/foto-jovem-m.jpg')
+         }else if(idade < 50) {
+            //adulto
+            img.setAttribute('src', 'imagens/foto-meia-idade-m.jpg')
+         }else {
+            //idoso
+            img.setAttribute('src', 'imagens/foto-idoso-m.jpg')
+         }
         } else if (fsex[1].checked) {
             gênero = 'Mulher'
+        } if(idade >= 0 && idade < 10) {
+            //criança
+            img.setAttribute('src','imagens/foto-criança-f.jpg')
+         }else if (idade < 21){
+            //jovem
+            img.setAttribute('src','imagens/foto-jovem-f.jpg')
+         }else if(idade < 50) {
+            //adulto
+            img.setAttribute('src','imagens/foto-meia-idade-f.jpg')
+         }else {
+            //idoso
+            img.setAttribute('src','imagens/foto-idosa-f.jpg')
         }
+        res.style.textAlign = 'center'
         res.innerHTML = `Detectamos ${gênero} com ${idade} anos.`
+        res.appendChild(img)
     }
 }
