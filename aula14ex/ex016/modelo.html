@@ -12,24 +12,19 @@
     </header>
 
     <section>
-        <div>
-            <label for="iinicio">Início:</label>
-            <input type="number" name="inicio" id="iinicio">
+        <div id="dados">
+            <p>Início: <input type="number" name="inicio" id="txto"> </p>
+            <p>Fim: <input type="number" name="Fim" id="txtf"></p>
+            <p>Passo: <input type="number" name="Passo" id="txtp">
+            </p>
+            <p><input type="button" value="Contar" onclick="contar()"></p>
+
+
+
         </div>
-        <div>
-            <label for="ifim">Fim:</label>
-            <input type="number" name="fim" id="ifim">
+        <div id="res">
+            Preparando a contagem...
         </div>
-        <div>
-            <label for="ipasso">Passo:</label>
-            <input type="number" name="passo" id="ipasso">
-        </div>
-        <div id="contar" onclick="clicou()">
-            <input type="submit" value="contar">
-        </div>
-        <p id="res">
-            Contando:
-        </p>
     </section>
 
     <footer>
