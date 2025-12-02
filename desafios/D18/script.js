@@ -1,8 +1,30 @@
-function adicionar() {
-    let num = document.getElementById('inum')
-    let tab = document.getElementById('ivalor')
 
-    if(num.value >= 100 || num.value.length == 0) {
-        alert("Valor inválido ou já definido")
+let num = document.getElementById('inum')
+let lista = document.getElementById('ivalor')
+let res = document.getElementById('res')
+let valores = []
+
+function isNumero(n) {
+    if(Number(n) >= 1 && Number(n) <= 100) {
+        return true
+}else{
+    return false
+}
+}
+function inLista(n, l) {
+    if (l.indexOf(Number(n)) != -1) {
+        return true
+} else {
+    return false
+}
+
+}
+
+function adicionar() {
+    if(isNumero(num.value) && !inLista(num.value, valores)) {
+        window.alert('Tudo ok!')
+    }else{
+        window.alert('Valor inválido ou já encontrado na lista.')
     }
+    
 }
